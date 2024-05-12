@@ -125,7 +125,7 @@ def complement(graph: list[list[int]]) -> list[list[int]]:
     # Initialize the complement graph with all zeros
     complement_graph = [[0] * graph_order for _ in range(graph_order)]
     # Iterate over the adjacency matrix and set matrix element to 1 if there's
-    # no edge in the original graph (row != element to avoid self-loops)
+    # no edge in the original graph (row != element to avoid self-loops).
     for row in range(graph_order):
         for element in range(graph_order):
             if row != element and graph[row][element] == 0:
